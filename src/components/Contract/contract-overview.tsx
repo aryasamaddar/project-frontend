@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ContractPDFViewer } from "./Contract2"
 
 interface ContractOverviewProps {
   contract: {
@@ -41,7 +42,10 @@ export function ContractOverview({ contract }: ContractOverviewProps) {
           </div>
         </div>
         <Button className="w-full">Download PDF</Button>
+        <div><ContractPDFViewer contract={contract} />
+</div>
       </CardContent>
+
     </Card>
   )
 }

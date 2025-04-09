@@ -8,6 +8,8 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ContractCard } from '@/components/Contract/contract-card'
+import { useEffect } from 'react'
+import api from '@/api/axiosConfig'
 
 // Mock data for contracts
 const contracts = [
@@ -46,13 +48,27 @@ const contracts = [
 export default function ContractsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
+  const [contracts, setContracts] = useState<any[]>([])
 
-  const filteredContracts = contracts.filter(contract => 
-    (contract.buyerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-     contract.farmerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-     contract.cropName.toLowerCase().includes(searchTerm.toLowerCase())) &&
-    (statusFilter === 'all' || contract.status.toLowerCase() === statusFilter.toLowerCase())
-  )
+  // const filteredContracts = contracts.filter(contract => 
+  //   (contract.buyerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //    contract.farmerName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //    contract.cropName.toLowerCase().includes(searchTerm.toLowerCase())) &&
+  //   (statusFilter === 'all' || contract.status.toLowerCase() === statusFilter.toLowerCase())
+  // )
+
+  useEffect(() =>{
+    const getOffers = async() => {
+      try{
+        const contracts = await api.get("contracts/all");
+        console.log("contracts: " + contracts.data.contracts);
+        setContracts(contracts.data.contracts);
+      }catch(err){
+        console.error("Error fetching contracts:", err);
+      }
+    }
+    getOffers();
+  },[]);
 
   return (
     <div className="container mx-auto px-4 py-20">
@@ -79,7 +95,7 @@ export default function ContractsPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredContracts.map(contract => (
+        {contracts.map(contract => (
           <ContractCard key={contract.id} contract={contract} />
         ))}
       </div>

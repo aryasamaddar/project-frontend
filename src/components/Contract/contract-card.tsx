@@ -36,7 +36,7 @@ export function ContractCard({ contract }: ContractCardProps) {
         <div className="flex items-center gap-4 mb-4">
           <Avatar>
             <AvatarImage src={contract.buyerImage} alt={contract.buyerName} />
-            <AvatarFallback>{contract.buyerName.charAt(0)}</AvatarFallback>
+            {/* <AvatarFallback>{contract.buyerName.charAt(0)}</AvatarFallback> */}
           </Avatar>
           <div>
             <h3 className="font-semibold">{contract.buyerName}</h3>
