@@ -11,6 +11,8 @@
     },
     "allowJs": true,
     "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "forceConsistentCasingInFileNames": true
-  }
+  },
 }

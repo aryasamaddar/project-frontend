@@ -23,8 +23,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import api, { editProfileRoute, profileRoute } from "@/api/axiosConfig";
-import { Toast } from "@radix-ui/react-toast";
-import { ToastAction } from "@/components/ui/toast";
+// import { Toast } from "@radix-ui/react-toast";
+// import { ToastAction } from "@/components/ui/toast";
 import { Toaster } from "@/components/ui/toaster";
 
 interface UserData {

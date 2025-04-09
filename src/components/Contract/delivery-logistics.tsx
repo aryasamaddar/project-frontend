@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle2, Circle, Truck } from 'lucide-react'
+import { CheckCircle2, Circle } from 'lucide-react'
 
 interface DeliveryLogisticsProps {
   contract: {

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 // import { useParams } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ContractOverview } from '@/components/Contract/contract-overview' 
@@ -33,23 +33,23 @@ export interface ContractData {
   paidAmount: string; // Amount already paid
 }
 
-const contractData:ContractData = {
-  id: '1',
-  buyerName: 'John Doe',
-  buyerImage: '/placeholder.svg?height=40&width=40',
-  farmerName: 'Alice Smith',
-  farmerImage: '/placeholder.svg?height=40&width=40',
-  cropName: 'Wheat',
-  quantity: '1000 kg',
-  price: '₹20,000',
-  status: 'Ongoing',
-  paymentTerms: 'Net 30',
-  harvestTime: '2023-12-31',
-  deliveryStatus: 'Dispatched',
-  trackingId: 'TRK123456789',
-  totalAmount: '₹20,000',
-  paidAmount: '₹10,000',
-}
+// const contractData:ContractData = {
+//   id: '1',
+//   buyerName: 'John Doe',
+//   buyerImage: '/placeholder.svg?height=40&width=40',
+//   farmerName: 'Alice Smith',
+//   farmerImage: '/placeholder.svg?height=40&width=40',
+//   cropName: 'Wheat',
+//   quantity: '1000 kg',
+//   price: '₹20,000',
+//   status: 'Ongoing',
+//   paymentTerms: 'Net 30',
+//   harvestTime: '2023-12-31',
+//   deliveryStatus: 'Dispatched',
+//   trackingId: 'TRK123456789',
+//   totalAmount: '₹20,000',
+//   paidAmount: '₹10,000',
+// }
 
 export const ContractDetailsPage : React.FC<ContractData>= (contractData) =>{
   // const params = useParams()

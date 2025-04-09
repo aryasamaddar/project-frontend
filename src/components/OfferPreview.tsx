@@ -1,6 +1,6 @@
 // import { OfferDetails } from "./utils/types";
 import { Separator } from "@/components/ui/separator";
-import { Wheat, FileText, X, ArrowLeftCircle } from "lucide-react";
+import { Wheat, FileText, ArrowLeftCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import { Offer } from "./Offer";
 import { OfferDetails } from "./utils/types";

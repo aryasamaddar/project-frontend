@@ -1,5 +1,5 @@
 import React from "react";
-import { Document, Page, Text, View, StyleSheet, PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet, PDFViewer } from "@react-pdf/renderer";
 
 // Define your contract data interface
 interface ContractProps {
@@ -230,7 +230,7 @@ export const ContractPDF: React.FC<ContractProps> = ({
 );
 
 //PDF Viewer
-export const ContractPDFViewer: React.FC<ContractProps> = (props) => (
+export const ContractPDFViewer: React.FC = () => (
   <div style={{ width: "100%", height: "100vh" }}>
     <PDFViewer style={{ width: "100%", height: "100%" }}>
       <ContractPDF {...contractData} />

@@ -22,7 +22,7 @@ import OffersPage from "./pages/OffersPage.tsx";
 import EditProfilePage from "./pages/EditProfile.tsx";
 import SignupPagePDF from "./pages/test.tsx";
 import ContractsPage from "./pages/Contract_card_list.tsx";
-import { ContractDetailsPage } from "./pages/Contract_details.tsx";
+// import { ContractDetailsPage } from "./pages/Contract_details.tsx";
 import Notifications from "./pages/Notifications.tsx";
 
 const App = () => {
@@ -49,7 +49,7 @@ const App = () => {
             <Route path="notifications" element={<Notification />} />
             <Route path="negotiations/:currentTermsId" element={<ContractNegotiationPage />} />
             <Route path="contracts" element={<ContractsPage />} />
-            <Route path="contracts/:contractId" element={<ContractDetailsPage />} />
+            {/* <Route path="contracts/:contractId" element={<ContractDetailsPage />} /> */}
           </Route>
           </>
         )

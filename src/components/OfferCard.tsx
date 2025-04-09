@@ -34,7 +34,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ offer, setViewDetails, setOfferDe
   
   useEffect(() => {
     const getCount = async () => {
-      const count = await new Promise((res) => {setTimeout(res, 1000)});
+      await new Promise((res) => {setTimeout(res, 1000)});
     }
     getCount();
   }, []);

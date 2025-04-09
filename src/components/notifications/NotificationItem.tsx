@@ -2,13 +2,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { formatDistanceToNow } from "date-fns";
 
 interface NotificationItemProps {
+  key: string,
   notification: {
     id: string;
     title: string;
     message: string;
     status: boolean;
     createdAt: string;
-  };
+  },
+  onMarkAsRead: (id: string) => Promise<void> ;
 }
 
 export function NotificationItem({ notification }: NotificationItemProps) {

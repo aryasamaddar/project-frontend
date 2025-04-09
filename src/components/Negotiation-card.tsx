@@ -4,7 +4,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { IndianRupee, Wheat, Calendar, User2 } from "lucide-react";
-import { Avatar, AvatarImage } from "./ui/avatar";
+// import { Avatar, AvatarImage } from "./ui/avatar";
 import { NegotiationDetail } from "./utils/types";
 import { Separator } from "@/components/ui/separator";
 
@@ -100,7 +100,7 @@ export const NegotiationCard: React.FC<NegotiationCardProps> = ({
               </span>
             </div>
             <span className="font-semibold text-foreground">
-              ₹{negotiation.proposedPrice?.toFixed(2)}
+              ₹{negotiation.proposedPrice}
             </span>
           </div>
 
@@ -110,7 +110,7 @@ export const NegotiationCard: React.FC<NegotiationCardProps> = ({
               <span>Harvest Date</span>
             </div>
             <span className="font-semibold text-foreground">
-              {formatDate(negotiation?.harvestTime)}
+              {formatDate(negotiation?.harvestTime!)}
             </span>
           </div>
         </div>

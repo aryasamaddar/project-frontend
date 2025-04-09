@@ -34,12 +34,12 @@ export const OfferDetailsStep: React.FC<OfferDetailsStepProps> = ({
     offerDuration,
   } = offerDetails || {};
 
-  const paymentTermsOptions = [
-    { value: "one-time", label: "One-time Payment" },
-    { value: "two-time", label: "Two Installments" },
-    { value: "three-time", label: "Three Installments" },
-    { value: "four-time", label: "Four Installments" },
-  ];
+  // const paymentTermsOptions = [
+  //   { value: "one-time", label: "One-time Payment" },
+  //   { value: "two-time", label: "Two Installments" },
+  //   { value: "three-time", label: "Three Installments" },
+  //   { value: "four-time", label: "Four Installments" },
+  // ];
 
   return (
     <>

@@ -42,7 +42,7 @@ export function ContractOverview({ contract }: ContractOverviewProps) {
           </div>
         </div>
         <Button className="w-full">Download PDF</Button>
-        <div><ContractPDFViewer contract={contract} />
+        <div><ContractPDFViewer />
 </div>
       </CardContent>
 

@@ -1,7 +1,7 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
+// import { Label } from "@/components/ui/label"
 import { CheckCircle2, Circle, DollarSign } from 'lucide-react'
 import { Progress } from "@/components/ui/progress"
 
